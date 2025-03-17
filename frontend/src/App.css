@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -9,7 +10,6 @@ html, body, #root {
   height: 100%;
   width: 100%;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 .app-header {
   background-color: #272626;
