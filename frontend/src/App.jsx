@@ -4,6 +4,8 @@ import Editor from "react-simple-code-editor";
 import prism from "prismjs";
 import "prismjs/components/prism-java";
 import "prismjs/components/prism-c";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-cpp";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
