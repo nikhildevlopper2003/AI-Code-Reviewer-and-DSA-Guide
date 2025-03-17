@@ -3,5 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  define: {
+    "process.env.BACKEND_URL": JSON.stringify(
+      "https://ai-code-reviewer-and-dsa-guide.onrender.com"
+    ),
+  },
+});

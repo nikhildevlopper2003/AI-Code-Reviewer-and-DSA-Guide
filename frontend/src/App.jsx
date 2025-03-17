@@ -25,10 +25,13 @@ function App() {
 
   async function reviewCode() {
     try {
-      const response = await axios.post("https://ai-code-reviewer-and-dsa-guide.onrender.com/ai/get-review", {
+      const API_URL = import.meta.env.VITE_BACKEND_URL;
+
+      const response = await axios.post(`${API_URL}/ai/get-review`, {
         code,
         language,
       });
+            
       setReview(response.data);
     } catch (error) {
       console.error("Error fetching review:", error);
