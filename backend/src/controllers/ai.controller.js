@@ -10,10 +10,11 @@ module.exports.getReview = async (req, res) => {
 
         console.log("Received request:", { code, language });
 
-        const response = await aiService(code, language);
+        const response = await aiService.generateContent(code, language); // ✅ Fix function call
         res.json(response);
     } catch (error) {
         console.error("Error processing request:", error);
         res.status(500).json({ error: "Internal server error" });
     }
 };
+

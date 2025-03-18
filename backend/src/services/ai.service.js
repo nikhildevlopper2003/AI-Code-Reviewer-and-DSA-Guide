@@ -123,4 +123,4 @@ async function generateContent(code, language) {
     return result.response.text();
 }
 
-module.exports = generateContent;
+module.exports = {generateContent};

@@ -16,10 +16,11 @@ app.use(
 
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.send('Hello World')
-})
+app.use("/ai", aiRoutes);
 
-app.use('/ai', aiRoutes)
+// ✅ Test if backend is running
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
-module.exports = app
+module.exports = app;
