@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -25,34 +25,40 @@ html, body, #root {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Responsive Design */
+
 @media (min-width: 1024px) {
   .app-header h1 {
     font-size: 6rem;
+
   }
 }
-
 @media (min-width: 768px) {
   .app-header h1 {
     font-size: 3rem;
+
   }
 }
 
+
+
+/* Main Layout */
 main {
   width: 100%;
   height: 90%;
   padding: 1.0rem;
   display: flex;
   gap: 1rem;
-  margin-top: 0rem;
+  margin-top: 0rem; /* Ensure content does not overlap header */
 }
 
 main .left, main .right {
-  height: 50vh;
+  height: 100%;
   flex-basis: 50%;
   border-radius: 0.7rem;
-  overflow: auto;
 }
 
+/* Left Section */
 main .left {
   background-color: #000000;
   position: relative;
@@ -62,12 +68,13 @@ main .left {
   height: 100%;
   width: 100%;
   margin: 0;
+  overflow: auto; 
+  white-space: pre-wrap;
   border-radius: 0.7rem;
   background-color: #0c0c0c;
-  overflow: auto;
-  white-space: pre-wrap;
 }
 
+/* Review Button */
 main .left .review {
   position: absolute;
   bottom: 1rem;
@@ -81,14 +88,16 @@ main .left .review {
   border-radius: 0.7rem;
 }
 
+/* Right Section */
 main .right {
   background-color: #343434;
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  overflow-y: auto;
-  border-radius: 0.9rem;
+  overflow: auto;
+  border-radius:0.9rem
 }
 
+/* Language Selector */
 .language-selector {
   position: absolute;
   top: 0.5rem;
@@ -123,6 +132,7 @@ main .right {
   border-radius: 0.3rem;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 1024px) {
   .app-header {
     font-size: 1.7rem;
@@ -152,6 +162,10 @@ main .right {
     top: 0.3rem;
     right: 0.3rem;
   }
+  main .left, main .right {
+    flex-basis: 100%;
+    height: 50vh;
+  }
 
   main .left .review {
     font-size: 0.8rem;
@@ -168,6 +182,10 @@ main .right {
   .app-header {
     font-size: 1.2rem;
     padding: 0.5rem 0;
+  }
+  main .left, main .right {
+    flex-basis: 100%;
+    height: 50vh;
   }
 
   .language-selector {
