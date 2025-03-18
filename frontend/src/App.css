@@ -53,6 +53,7 @@ main {
 }
 
 main .left, main .right {
+
   height: 100%;
   flex-basis: 50%;
   border-radius: 0.7rem;
@@ -62,6 +63,7 @@ main .left, main .right {
 main .left {
   background-color: #000000;
   position: relative;
+  overflow: auto;
 }
 
 .left .code, .code pre, .code pre code {
@@ -69,9 +71,11 @@ main .left {
   width: 100%;
   margin: 0;
   overflow: auto; 
+  display: flex;
   white-space: pre-wrap;
   border-radius: 0.7rem;
   background-color: #0c0c0c;
+  padding: 0.5rem;
 }
 
 /* Review Button */
@@ -93,9 +97,12 @@ main .right {
   background-color: #343434;
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  overflow: auto;
-  border-radius:0.9rem
-}
+  overflow-y: auto; 
+  overflow-x: hidden;
+  max-height: 100%;
+  border-radius: 0.9rem;
+  word-wrap: break-word; }
+
 
 /* Language Selector */
 .language-selector {
